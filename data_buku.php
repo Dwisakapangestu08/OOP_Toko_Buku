@@ -8,6 +8,12 @@ $db = $database->connect();
 
 $buku = new Buku($db);
 
+
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $buku->delete($id);
+}
+
 $stmt = $buku->read();
 $buku = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -26,7 +32,7 @@ $buku = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <div class="container">
         <h5 class="mt-3">Data Buku</h5>
-        <a href="create_buku.php" class="btn btn-primary my-2">Tambah Buku</a>
+        <a href="tambah_buku.php" class="btn btn-primary my-2">Tambah Buku</a>
         <table class="table table-striped table-hover">
             <tr>
                 <thead>
@@ -49,8 +55,8 @@ $buku = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $row['pengarang'] ?></td>
                         <td><?= $row['penerbit'] ?></td>
                         <td>
-                            <a href="edit_buku.php?id_buku=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
-                            <a href="delete_buku.php?id_buku=<?= $row['id'] ?>" class="btn btn-danger">Delete</a>
+                            <a href="edit_buku.php?edit=<?= $row['id'] ?>" class="btn btn-warning">Edit</a>
+                            <a href="data_buku.php?delete=<?= $row['id'] ?>" class="btn btn-danger">Delete</a>
                         </td>
                     </tbody>
                 </tr>
