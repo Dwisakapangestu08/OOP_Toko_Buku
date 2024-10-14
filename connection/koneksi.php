@@ -1,8 +1,9 @@
 <?php
 class Database
 {
+    // Property
     private $host = 'localhost'; // Ganti sesuai konfigurasi
-    private $db_name = 'nama_database'; // Ganti dengan nama database
+    private $db_name = 'db_toko_buku'; // Ganti dengan nama database
     private $username = 'root'; // Ganti dengan username database
     private $password = ''; // Ganti dengan password database
     private $conn;
