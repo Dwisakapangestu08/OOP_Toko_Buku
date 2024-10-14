@@ -26,6 +26,7 @@ $buku = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <div class="container">
         <h5 class="mt-3">Data Buku</h5>
+        <a href="create_buku.php" class="btn btn-primary my-2">Tambah Buku</a>
         <table class="table table-striped table-hover">
             <tr>
                 <thead>
