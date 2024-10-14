@@ -22,7 +22,7 @@ class Database
             );
             // Set mode error PDO ke exception
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Koneksi berhasil!";
+            // echo "Koneksi berhasil!";
         } catch (PDOException $e) {
             echo "Koneksi gagal: " . $e->getMessage();
         }
