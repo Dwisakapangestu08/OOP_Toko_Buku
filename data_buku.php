@@ -8,7 +8,6 @@ $db = $koneksi->connect();
 
 $buku = new Buku($db);
 
-
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $buku->delete($id);
