@@ -1,5 +1,5 @@
 <?php
-class Database
+class Koneksi
 {
     // Property
     private $host = 'localhost'; // Ganti sesuai konfigurasi
@@ -32,5 +32,5 @@ class Database
 }
 
 // Cara penggunaan
-$db = new Database();
+$db = new Koneksi();
 $connection = $db->connect();

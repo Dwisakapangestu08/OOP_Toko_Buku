@@ -3,8 +3,8 @@
 include_once "buku.php";
 include_once "connection/koneksi.php";
 
-$database = new Database();
-$db = $database->connect();
+$koneksi = new Koneksi();
+$db = $koneksi->connect();
 
 $buku = new Buku($db);
 
